@@ -1,0 +1,60 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    }
+    
+    .navbar {
+    background-color:#ef62a9;
+    }
+    
+     .nav-link {
+    color: #fff !important;
+    }
+    
+    .navbar-brand {
+        height: 400x;
+        width: auto;
+        margin-right: 8px;
+      }
+
+    .hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden; /* Garante que o conteúdo não exceda a seção */
+    }
+    
+    .carousel-inner {
+    height: 100%;
+    }
+    
+    .carousel-item {
+    height: 100%;
+    }
+    
+    .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem cubra todo o contêiner */
+    }
+    
+    .hero-content {
+    position: absolute; /* Posiciona o conteúdo sobre o carrossel */
+    z-index: 1; /* Garante que o conteúdo esteja sobre a imagem */
+    color:black;
+    }
+    
+    .content-section {
+    padding: 4rem 0;
+    }
+    
+    .footer {
+    background-color: #ef62a9;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    gap: 50px;
+    } 
