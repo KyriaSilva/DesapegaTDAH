@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="user-info">
+                <span>KYRIA STEFFANY SILVA</span>
+            </div>
+        </div>
+
+        <h1>CADASTRO DO ALUNO</h1>
+        
+        <form id="student-form" onsubmit="return validateForm()">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="guardian-name">Nome do Responsável</label>
+            <input type="text" id="guardian-name" name="guardian-name" required>
+
+            <label for="guardian-phone">Telefone do Responsável</label>
+            <input type="tel" id="guardian-phone" name="guardian-phone" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirmar senha</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">CONFIRMAR CADASTRO</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
