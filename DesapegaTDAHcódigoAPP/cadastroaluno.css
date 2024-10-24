@@ -35,11 +35,6 @@ body {
     justify-content: space-between;
 }
 
-h1 {
-    text-align: center;
-    color: #cc1e6e;
-    margin-bottom: 20px;
-}
 
 form {
     display: flex;
