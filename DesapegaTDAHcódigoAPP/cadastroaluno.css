@@ -22,17 +22,32 @@ body {
 }
 
 .header {
-    background-color: #cc1e6e;
-    padding: 10px;
-    border-radius: 8px 8px 0 0;
+    background-color: #b5287c; /* Cor da barra superior */
+    height: 60px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.back-btn {
+    background: #e78eac;
+    border: none;
     color: white;
-    text-align: left;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 .user-info {
     display: flex;
+    text-align: center;
+    color:white;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
