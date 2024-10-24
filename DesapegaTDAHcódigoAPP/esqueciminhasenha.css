@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7c8e0; /* Rosa claro */
+}
+
+.container {
+    background-color: white;
+    width: 900px; /* Largura atualizada */
+    padding: 100px; /* Padding atualizado */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #bb29a1; /* Borda roxa */
+    position: relative;
+}
+
+.header {
+    background-color: #b5287c; /* Cor da barra superior */
+    height: 80px; /* Aumentei a altura da barra superior */
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px; /* Aumentei o padding interno */
+}
+
+.back-btn {
+    background: #e78eac;
+    border: none;
+    color: white;
+    font-size: 25px; /* Aumentei o tamanho da fonte */
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px; /* Aumentei o tamanho do botão */
+    height: 50px; /* Aumentei o tamanho do botão */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px; /* Aumentei a margem superior */
+}
+
+label {
+    font-size: 18px; /* Aumentei o tamanho da fonte dos rótulos */
+    color: #333;
+    margin-bottom: 10px; /* Aumentei o espaço abaixo dos rótulos */
+}
+
+input {
+    padding: 15px; /* Aumentei o padding dos inputs */
+    margin-bottom: 20px; /* Aumentei o espaçamento entre os inputs */
+    border: 1px solid #bb29a1; /* Borda das caixas de texto */
+    border-radius: 10px;
+    font-size: 16px; /* Aumentei o tamanho da fonte dos inputs */
+}
+
+input:focus {
+    outline: none;
+    border-color: #b5287c; /* Cor da borda ao focar */
+}
+
+.submit-btn {
+    padding: 15px; /* Aumentei o padding do botão */
+    background-color: #b5287c; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px; /* Aumentei o tamanho da fonte do botão */
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #a31e6e;
+}

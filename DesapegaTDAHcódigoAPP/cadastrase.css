@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7c8e0; /* Fundo rosa claro */
+}
+
+.container {
+    background-color: white;
+    width: 900px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #bb29a1; /* Borda roxa */
+    position: relative;
+}
+
+.header {
+    background-color: #b5287c; /* Cor da barra superior */
+    height: 60px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.back-btn {
+    background: #e78eac;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #00000030; /* Borda com leve transparência */
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn.aluno {
+    background-color: #f7c8e0; /* Rosa claro */
+}
+
+.btn.professor {
+    background-color: #4a60d1; /* Azul */
+    color: white;
+}
+
+.btn.medico {
+    background-color: #55d34e; /* Verde */
+    color: white;
+}
