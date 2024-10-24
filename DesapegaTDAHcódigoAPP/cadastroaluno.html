@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro do Aluno</title>
     <link rel="stylesheet" href="cadastroaluno.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -13,7 +15,7 @@
                 <span>CADASTRO DO ALUNO</span>
             </div>
         </div>
-        
+
         <form id="student-form" onsubmit="return validateForm()">
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" required>
@@ -32,11 +34,12 @@
 
             <label for="confirm-password">Confirmar senha</label>
             <input type="password" id="confirm-password" name="confirm-password" required>
-
-            <button type="submit">CONFIRMAR CADASTRO</button>
+            <div id="div-submit">
+                <button type="submit" id="submit">CONFIRMAR CADASTRO</button>
+            </div>
         </form>
     </div>
 
-    <script src="script.js"></script>
 </body>
+
 </html>
