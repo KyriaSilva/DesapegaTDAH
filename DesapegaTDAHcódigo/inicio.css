@@ -1,0 +1,29 @@
+img {
+    max-width: 100%; /* A imagem ocupará no máximo 100% da largura do seu contêiner */
+    height: auto; /* Mantém a proporção original da imagem */
+    border-radius: 10px; /* Arredonda as bordas da imagem */
+    margin-bottom: 1rem; /* Espaço abaixo da imagem */
+}
+
+
+.inicio {
+    background-color: #be5c98; /* Cor de fundo (verde) */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno (vertical e horizontal) */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease; /* Animação para a mudança de cor */
+    margin-top: 50px; /* Espaço acima do botão (ajuste conforme necessário) */
+}
+
+/* Efeito ao passar o mouse */
+.inicio:hover {
+    background-color: #d264c5; /* Cor de fundo ao passar o mouse */
+}
+
+.inicio:focus {
+    outline: none; /* Remove o contorno padrão ao focar */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6); /* Sombra ao focar */
+}

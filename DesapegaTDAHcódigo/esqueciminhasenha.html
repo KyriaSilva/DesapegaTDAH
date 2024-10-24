@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesapegaTDAH</title>
+    <link rel="stylesheet" href="esqueciminhasenha.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-btn" onclick="voltarParaInicio()">&larr;</button>
+        </div>
+        <form class="form">
+            <label for="username">Nome do usuário</label>
+            <input type="text" id="username" placeholder="Nome do usuário">
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email">
+
+            <label for="confirm-email">Confirme o email</label>
+            <input type="email" id="confirm-email" placeholder="Confirme o email">
+
+            <button type="submit" class="submit-btn">RECUPERAR SENHA</button>
+        </form>
+    </div>
+    <script>
+        function voltarParaInicio() {
+            window.location.href = 'login.html'; // Redireciona para inicio.html
+        }
+    </script>
+</body>
+</html>

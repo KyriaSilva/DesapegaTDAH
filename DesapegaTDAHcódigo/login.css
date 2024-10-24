@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f48fb1; /* Cor de fundo da página */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 60px; /* Espaço para a navbar */
+    padding-bottom: 60px; /* Espaço para o rodapé */
+}
+
+.navbar {
+    background-color: #ad2066; /* Cor da navbar */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    width: 100%;
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0;
+    left: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Aumenta a largura do container */
+    max-width: 900px; /* Limita o tamanho máximo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Ajusta a altura para o centro, considerando navbar e rodapé */
+}
+
+.login-box {
+    background-color: #fff; /* Fundo branco para a caixa de login */
+    padding: 20px;
+    width: 100%; /* Deixa a caixa de login ocupar todo o espaço disponível */
+    max-width: 600px; /* Limita a largura da caixa de login */
+    text-align: center;
+    border-radius: 10px;
+}
+
+.logo img {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #c2185b;
+    border-radius: 5px;
+}
+
+a {
+    margin-bottom: 15px;
+    color: #c2185b;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.entrar-btn {
+    background-color: #f48fb1; /* Rosa mais claro para o botão */
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.google-btn {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.cadastrar-link {
+    color: #c2185b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #ad2066; /* Cor do rodapé */
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1em;
+    width: 100%;
+    position: fixed; /* Fixa o rodapé no fim da página */
+    bottom: 0;
+    left: 0;
+}
+
+
+

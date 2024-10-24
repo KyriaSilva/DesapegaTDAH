@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7c8e0; /* Rosa claro */
+}
+
+.container {
+    background-color: white;
+    width: 900px; /* Aumentei a largura */
+    padding: 100px; /* Aumentei o padding para expandir para cima e para baixo */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #bb29a1; /* Borda roxa */
+    position: relative;
+}
+
+.header {
+    background-color: #b5287c; /* Cor da barra superior */
+    height: 60px;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.back-btn {
+    background: #e78eac;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bb29a1; /* Borda das caixas de texto */
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #b5287c; /* Cor da borda ao focar */
+}
+
+.submit-btn {
+    padding: 10px;
+    background-color: #b5287c; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #a31e6e;
+}
