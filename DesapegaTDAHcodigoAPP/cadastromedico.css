@@ -1,0 +1,91 @@
+/* Estilos gerais */
+body {
+    background-color: #FADADD;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 350px; /* Ajusta a largura da caixa */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: auto;
+    text-align: center; /* Centraliza o conteúdo do texto */
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #B23867;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#div-button-back {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #B23867;
+    cursor: pointer;
+}
+
+form {
+    margin-top: 20px;
+    margin: 5% 5% 5% 5%;
+    width: auto;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: auto;
+    padding: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 15px;
+    border: 1px solid #B23867;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #E57399;
+}
+
+label {
+    font-weight: bold;
+    color: #B23867;
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #B23867;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #E57399;
+}
