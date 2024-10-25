@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro do Médico</title>
     <link rel="stylesheet" href="cadastromedico.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
             <div id="div-button-back">
-            <button class="back-button">&larr;</button>
-        </div>
-            CADASTRO DO MÉDICO
+                <button class="back-button">&larr;</button>
+            </div>
+            <div id="div-h2-cad-med">
+                <h2 id="h2-cad-med">CADASTRO DO MÉDICO</h2>
+            </div>
         </div>
         <form>
-            <input type="text" name="nome" placeholder="Nome">
-            <input type="number" name="idade" placeholder="Idade">
-            <input type="text" name="crm" placeholder="CRM">
-            <label for="diploma">Comprovação de ensino Superior</label>
-            <input type="file" id="diploma" name="diploma" accept="application/pdf">
+            <div id="div-form">
+            <div class="labels-div">
+                <label id="">Nome</label>
+                <input type="text" name="nome" placeholder="Nome">
+            </div>
+            <div class="labels-div">
+                <label id="">Idade</label>
+                <input type="number" name="idade" placeholder="Idade" class="inputs-text-number">
+            </div>
+            <div class="labels-div">
+                <label id="">Nome</label>
+                <input type="text" name="crm" placeholder="CRM">
+            </div>
+            <div class="labels-div">
+                <label id="diploma">Comprovação de ensino Superior</label>
+                <input type="file" id="diploma" name="diploma" accept="application/pdf">
+            </div>
+        </div>
         </form>
     </div>
 </body>
+
 </html>
