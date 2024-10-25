@@ -117,16 +117,14 @@ a {
     font-weight: bold;
 }
 
-
 footer {
-    background-color: #a3005a;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    
+    position: relative; /* Padrão, o rodapé ficará no fluxo normal da página */
+    bottom: 0; /* Ajusta o rodapé para a parte inferior se você quiser colocá-lo no final */
+    top: 57px; /* Se você quiser colocá-lo no topo, use este comando */
+    width: 100%; /* Faz com que o rodapé ocupe toda a largura da página */
+    background-color: #a3005a; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto do rodapé */
+    text-align: center; /* Alinha o texto no centro */
+    padding: 20px; /* Espaçamento interno */
 }
 
