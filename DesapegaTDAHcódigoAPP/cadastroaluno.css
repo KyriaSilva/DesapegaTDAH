@@ -41,7 +41,8 @@ h2 {
     font-size: 22px;
     text-align: center;
     flex: 1;
-    
+    position: relative; /* Necessário para usar 'left' */
+    left: -40px; /* Move o texto 10 pixels para a esquerda */
 }
 
 form {
