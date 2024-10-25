@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #f48fb1; /* Cor de fundo da página */
+    background-color: #f7c8e0; /* Cor de fundo da página */
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -16,9 +16,9 @@ body {
     padding-top: 60px; /* Espaço para a navbar */
     padding-bottom: 60px; /* Espaço para o rodapé */
 }
-
+/* não usar por enquanto 
 .navbar {
-    background-color: #ad2066; /* Cor da navbar */
+    background-color: #ad2066; 
     height: 60px;
     display: flex;
     justify-content: center;
@@ -26,10 +26,11 @@ body {
     color: white;
     font-size: 1.5em;
     width: 100%;
-    position: fixed; /* Fixa a navbar no topo */
+    position: fixed; 
     top: 0;
     left: 0;
 }
+*/
 
 .container {
     background-color: #ffffff;
@@ -116,17 +117,16 @@ a {
     font-weight: bold;
 }
 
-.footer {
-    background-color: #ad2066; /* Cor do rodapé */
-    text-align: center;
-    padding: 20px;
+
+footer {
+    background-color: #a3005a;
     color: white;
-    font-size: 1em;
-    width: 100%;
-    position: fixed; /* Fixa o rodapé no fim da página */
+    text-align: center;
+    padding: 15px;
+    position: relative;
     bottom: 0;
+    width: 100%;
     left: 0;
+    
 }
-
-
 
