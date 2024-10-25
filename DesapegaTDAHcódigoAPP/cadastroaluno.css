@@ -6,83 +6,72 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8c7d9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f4c2d7;
 }
 
 .container {
-    background-color: #fff;
+    width: 300px;
+    margin: 100px auto;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-    background-color: #b5287c; /* Cor da barra superior */
-    height: 60px;
-    border-radius: 15px 15px 0 0;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    justify-content: space-between;
+    background-color: #a3005a;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
 }
 
-.back-btn {
-    background: #e78eac;
+.back-button {
+    background: none;
     border: none;
     color: white;
-    font-size: 25px;
+    font-size: 24px;
     cursor: pointer;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
 }
 
-.user-info {
-    display: flex;
+h2 {
+    font-size: 18px;
     text-align: center;
-    color:white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1;
 }
-
 
 form {
-    display: flex;
-    flex-direction: column;
+    margin-top: 20px;
 }
 
 label {
+    display: block;
     margin-bottom: 5px;
-    color: #cc1e6e;
-    font-weight: bold;
+    font-size: 14px;
+    color: #000000;
 }
 
 input {
-    padding: 10px;
+    width: 100%;
+    padding: 8px;
     margin-bottom: 15px;
-    border: 2px solid #cc1e6e;
+    border: 1px solid #a3005a;
     border-radius: 4px;
-    outline: none;
 }
 
-input:focus {
-    border-color: #a31657;
-}
-
-button {
+.submit-button {
+    width: 100%;
     padding: 10px;
-    background-color: #cc1e6e;
+    background-color: #a3005a;
     color: white;
     border: none;
     border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #a31657;
+.submit-button:hover {
+    background-color: #90004d;
 }
