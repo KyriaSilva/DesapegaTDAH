@@ -9,47 +9,101 @@
 <body>
     <div class="container">
         <div class="header">
-            <button class="back-button">&larr;</button>
-            <h1>Cadastro do Professor</h1>
+            <button class="back-button" onclick="voltarParaInicio()">&larr;</button>
+            <h2 id="frase">Cadastro do Aluno</h2>
         </div>
-
-        <form>
-            <!-- Primeira Parte -->
+        <form id="formCadastro">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome">
-
-            <label for="idade">Idade</label>
-            <input type="number" id="idade" name="idade">
-
-            <label for="disciplina">Disciplina de atuação</label>
-            <div class="checkbox-group" id="disciplina-container">
-                <label><input type="checkbox" name="disciplina" value="Programação"> Programação (Informática)</label>
-                <label><input type="checkbox" name="disciplina" value="Pensamento Computacional"> Pensamento Computacional</label>
-                <label><input type="checkbox" name="disciplina" value="Língua Portuguesa"> Língua Portuguesa</label>
-                <label><input type="checkbox" name="disciplina" value="Redação"> Redação</label>
-                <label><input type="checkbox" name="disciplina" value="Francês"> Francês</label>
-                <label><input type="checkbox" name="disciplina" value="Filosofia"> Filosofia</label>
-                <label><input type="checkbox" name="disciplina" value="Artes"> Artes</label>
-                <label><input type="checkbox" name="disciplina" value="Inglês"> Inglês</label>
-                <label><input type="checkbox" name="disciplina" value="Sociologia"> Sociologia</label>
-                <label><input type="checkbox" name="disciplina" value="Química"> Química</label>
-                <label><input type="checkbox" name="disciplina" value="Espanhol"> Espanhol</label>
-                <label><input type="checkbox" name="disciplina" value="Biologia"> Biologia</label>
-                <label><input type="checkbox" name="disciplina" value="Matemática"> Matemática</label>
-                <label><input type="checkbox" name="disciplina" value="Educação Física"> Educação Física</label>
-                <label><input type="checkbox" name="disciplina" value="Ensino Religioso"> Ensino Religioso</label>
-                <label><input type="checkbox" name="disciplina" value="História"> História</label>
-                <label><input type="checkbox" name="disciplina" value="Literatura"> Literatura</label>
-                <label><input type="checkbox" name="disciplina" value="Geografia"> Geografia</label>
-                <label><input type="checkbox" name="disciplina" value="Física"> Física</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <div class="title">Disciplina de atuação</div>
+            <div class="card">
+                <div class="grid" id="disciplina-container">
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Programação (Informática)">
+                        <span>Programação (Informática)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Francês">
+                        <span>Francês</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Sociologia">
+                        <span>Sociologia</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Matemática">
+                        <span>Matemática</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Educação Física">
+                        <span>Educação Física</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Pensamento computacional">
+                        <span>Pensamento computacional</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Filosofia">
+                        <span>Filosofia</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Química">
+                        <span>Química</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Ensino Religioso">
+                        <span>Ensino Religioso</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="História">
+                        <span>História</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Língua Portuguesa">
+                        <span>Língua Portuguesa</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Artes">
+                        <span>Artes</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Espanhol">
+                        <span>Espanhol</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Literatura">
+                        <span>Literatura</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Geografia">
+                        <span>Geografia</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Redação">
+                        <span>Redação</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Inglês">
+                        <span>Inglês</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Biologia">
+                        <span>Biologia</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox" value="Física">
+                        <span>Física</span>
+                    </label>
+                </div>
+                <div class="button-container">
+                    <button type="button" id="add-materia-btn" class="add-button">+ Adicionar matéria específica</button>
+                </div>
             </div>
-
-            <button type="button" class="add-button" id="add-materia-btn">+ Adicionar matéria específica</button>
-
+           
             <label for="comprovacao">Comprovação de ensino Superior</label>
             <input type="file" id="comprovacao" name="comprovacao">
 
-            <!-- Segunda Parte -->
             <label for="cpf">CPF</label>
             <input type="text" id="cpf" name="cpf">
 
@@ -69,32 +123,36 @@
         </form>
     </div>
 
-    <!-- JavaScript para adicionar nova matéria -->
     <script>
         const addMateriaBtn = document.getElementById('add-materia-btn');
         const disciplinaContainer = document.getElementById('disciplina-container');
 
         addMateriaBtn.addEventListener('click', () => {
-            // Solicita ao usuário o nome da nova matéria
             const novaMateria = prompt("Digite o nome da nova matéria:");
-
-            // Verifica se o usuário forneceu algum valor
             if (novaMateria) {
-                // Cria um novo elemento label com checkbox
                 const novaLabel = document.createElement('label');
                 const novoInput = document.createElement('input');
                 novoInput.type = 'checkbox';
                 novoInput.name = 'disciplina';
                 novoInput.value = novaMateria;
+                novoInput.checked = true;
 
-                // Adiciona o input e o texto da matéria ao label
                 novaLabel.appendChild(novoInput);
                 novaLabel.append(` ${novaMateria}`);
-
-                // Adiciona o novo label à lista de disciplinas
                 disciplinaContainer.appendChild(novaLabel);
             }
         });
+
+        document.getElementById('formCadastro').addEventListener('submit', (event) => {
+            event.preventDefault(); // Impede o envio do formulário
+            alert("Cadastro realizado com sucesso!"); // Ação após o cadastro
+            // Aqui você pode adicionar lógica para salvar os dados, se necessário
+        });
+
+        function voltarParaInicio() {
+            window.location.href = 'cadastrase.html'; // Redireciona para inicio.html
+        }
+
     </script>
 </body>
 </html>
