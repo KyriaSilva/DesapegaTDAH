@@ -145,3 +145,47 @@ input[type="checkbox"] {
     margin: 20px 0 10px;
     color: #d63080;
 }
+
+/* Adicione isso ao seu arquivo CSS existente */
+
+.add-button {
+    background-color: #d63080;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.add-button:hover {
+    background-color: #a81d5f;
+}
+
+/* Estilo para o botão de confirmação */
+#confirmar-adicao {
+    background-color: #f16aa9; /* Verde */
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Espaçamento entre o campo e o botão */
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+#confirmar-adicao:hover {
+    background-color: #e18ac9; /* Verde mais escuro */
+}
+
+/* Margem para o campo de entrada da nova matéria */
+#nova-materia {
+    margin-top: 10px; /* Espaço acima do campo de entrada */
+    width: 70%; /* Definindo uma largura, opcional */
+}

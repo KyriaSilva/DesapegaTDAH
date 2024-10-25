@@ -98,6 +98,9 @@
                 </div>
                 <div class="button-container">
                     <button type="button" id="add-materia-btn" class="add-button">+ Adicionar matéria específica</button>
+                    <!-- Campo de entrada para nova matéria -->
+                    <input type="text" id="nova-materia" placeholder="Digite a nova matéria" style="display:none;">
+                    <button type="button" id="confirmar-adicao" style="display:none;">Adicionar</button>
                 </div>
             </div>
            
@@ -125,10 +128,18 @@
 
     <script>
         const addMateriaBtn = document.getElementById('add-materia-btn');
+        const novaMateriaInput = document.getElementById('nova-materia');
+        const confirmarAdicaoBtn = document.getElementById('confirmar-adicao');
         const disciplinaContainer = document.getElementById('disciplina-container');
 
         addMateriaBtn.addEventListener('click', () => {
-            const novaMateria = prompt("Digite o nome da nova matéria:");
+            novaMateriaInput.style.display = 'inline'; // Mostra o campo de entrada
+            confirmarAdicaoBtn.style.display = 'inline'; // Mostra o botão de confirmação
+            novaMateriaInput.value = ''; // Limpa o campo de entrada
+        });
+
+        confirmarAdicaoBtn.addEventListener('click', () => {
+            const novaMateria = novaMateriaInput.value.trim(); // Pega o valor digitado
             if (novaMateria) {
                 const novaLabel = document.createElement('label');
                 const novoInput = document.createElement('input');
@@ -140,6 +151,12 @@
                 novaLabel.appendChild(novoInput);
                 novaLabel.append(` ${novaMateria}`);
                 disciplinaContainer.appendChild(novaLabel);
+
+                // Esconde o campo de entrada e o botão de confirmação
+                novaMateriaInput.style.display = 'none';
+                confirmarAdicaoBtn.style.display = 'none';
+            } else {
+                alert("Por favor, digite uma matéria válida."); // Alerta opcional se o campo estiver vazio
             }
         });
 
@@ -152,7 +169,6 @@
         function voltarParaInicio() {
             window.location.href = 'cadastrase.html'; // Redireciona para inicio.html
         }
-
     </script>
 </body>
 </html>
