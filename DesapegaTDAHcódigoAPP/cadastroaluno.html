@@ -9,7 +9,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <button class="back-button">&#8592;</button>
+            <div class="header">
+                <button class="back-btn" onclick="voltarParaInicio()">&larr;</button>
+            </div>
             <h2>Cadastro do Aluno</h2>
         </div>
         <form>
@@ -34,5 +36,10 @@
             <button type="submit" class="submit-button">Confirmar Cadastro</button>
         </form>
     </div>
+    <script>
+        function voltarParaInicio() {
+            window.location.href = 'cadastrase.html'; // Redireciona para inicio.html
+        }
+    </script>
 </body>
 </html>
