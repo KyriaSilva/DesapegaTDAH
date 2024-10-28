@@ -25,9 +25,9 @@
                 <input type="password" id="senha" placeholder="Digite sua senha">
                 
                 <a href="esqueciminhasenha.html">Esqueci minha senha</a>
-                
-                <button type="submit" class="entrar-btn">ENTRAR</button>
-                
+
+                    <button type="button" class="entrar-btn">ENTRAR</button>
+
                 <button class="google-btn">Logar com o Google</button>
             </form>
             <a href="cadastrase.html" class="cadastrar-link">Cadastrar-se</a>
@@ -39,5 +39,42 @@
     <footer class="footer">
       <h5> &copy; 2024 DesapegaTDAH. Todos os direitos reservados. </h5>
     </footer>
+
+<script>
+        async function login() {
+            // Obtendo valores do email e senha
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            // Exemplo de chamada para uma função que verifica o tipo de usuário no servidor (AJAX / Fetch)
+            const tipoUsuario = await verificarUsuario(email, senha);
+
+            // Redireciona para a página correta com base no tipo de usuário
+            if (tipoUsuario === 'aluno') {
+                window.location.href = 'inicioaluno.html';
+            } else if (tipoUsuario === 'medico') {
+                window.location.href = 'iniciomedico.html';
+            } else if (tipoUsuario === 'professor') {
+                window.location.href = 'inicioprofessor.html';
+            } else {
+                alert("Credenciais incorretas");
+            }
+        }
+
+        // Função para simular a verificação do tipo de usuário no servidor
+        async function verificarUsuario(email, senha) {
+            // Exemplo de simulação de backend para teste:
+            // Aqui você implementaria uma chamada AJAX para o backend.
+            if (email === "aluno@example.com" && senha === "senhaAluno") {
+                return "aluno";
+            } else if (email === "medico@example.com" && senha === "senhaMedico") {
+                return "medico";
+            } else if (email === "professor@example.com" && senha === "senhaProfessor") {
+                return "professor";
+            }
+            return null; // Caso não encontre o usuário
+        }
+    </script>
+</script>
 </body>
 </html>
