@@ -6,7 +6,7 @@
 
   body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
 
   /* Cabeçalho */
   .header {
-    background-color: #e3b5e6;
+    background-color:#fbcfe8;
     color: #333;
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@
 
   /* Tamanhos específicos */
   .box-notes {
-    background-color: #b3c7f9;
+    background-color:#c28aff;
     width: 100%;
     height: 350px;
   }
@@ -99,6 +99,7 @@
   .box-small {
     width: 80px;
     height: 80px;
+   
   }
 
   .box-horizontal {
@@ -116,7 +117,7 @@
 
   /* Estilos dos blocos individuais */
   .box-health {
-    background-color: #79d3c2;
+    background: linear-gradient(to right,#7ed957, #0097b2);
   }
   
   .box-exercises {
@@ -125,9 +126,14 @@
   }
 
   .icon {
-    width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    width: 70px; /* Ajuste o tamanho da imagem conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
     color: #fff;
+}
+.icon-box {
+  width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  color: #fff;
 }
 
 .text {
@@ -137,27 +143,27 @@
 }
 
   .box-books {
-    background-color: #c3a1e5;
+    background-color: #ad2066;
   }
 
   .box-chat {
-    background-color: #a3d3e5;
+    background-color: #029daf;
   }
 
   .box-classes {
-    background-color: #79aaf2;
+    background-color: #2e59a7;
   }
 
   .box-content {
-    background-color: #d8b3f7;
+    background-color: #e04891;
   }
 
   .box-lives {
-    background-color: #d8b3f7;
+    background-color: #cb39ff;
   }
 
   .box-games {
-    background-color: #e58b8b;
+    background-color: #ff5d33;
   }
 
   /* Estilo do texto das descrições */
