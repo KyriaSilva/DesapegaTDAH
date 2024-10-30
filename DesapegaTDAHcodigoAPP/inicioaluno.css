@@ -13,6 +13,21 @@
     min-height: 100vh;
   }
 
+  p{
+    color: rgba(255, 255, 255, 0.5); /* Branco com 50% de transparência */
+  }
+
+
+.image-button {
+    display: inline-block; /* Permite que a imagem se comporte como um botão */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
   .container {
     width: 90%;
     max-width: 1200px;
@@ -140,6 +155,7 @@
     margin-top: 2px; /* Espaço entre a imagem e o texto */
     font-size: 12px; /* Tamanho da fonte do texto */
     color:#ffff;
+
 }
 
   .box-books {
