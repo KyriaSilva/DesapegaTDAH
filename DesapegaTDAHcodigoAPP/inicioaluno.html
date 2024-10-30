@@ -1,50 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desapega TDAH</title>
-    <link rel="stylesheet" href="./inicioaluno.css">
+    <link rel="stylesheet" href="inicioaluno.css">
 </head>
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="logo">
-            <div class="user-icon">👤</div>
-            <span class="logo-text">Desapega<span class="highlight">TDAH</span></span>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar">
-            <button>🔍</button>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <!-- Espaço para imagem do usuário -->
+                <img src="caminho-da-imagem-do-usuario.png" alt="Ícone do Usuário" class="user-icon">
+                <!-- Espaço para logotipo personalizado -->
+                <img src="logo.png" alt="Logo Desapega TDAH" class="logo-image">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+                <button>🔍</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Anotações Section -->
+            <div class="notes-section">
+                <h2>Anotações</h2>
+                <p>Não deixe suas dúvidas escaparem! Anote tudo aqui e transforme cada pergunta em um passo a mais para o sucesso</p>
+            </div>
+
+            <!-- Grid Menu Section -->
+            <div class="menu">
+                <div class="menu-item saude">Saúde</div>
+                <div class="menu-item aulas">Aulas</div>
+                <div class="menu-item exercicios">Exercícios</div>
+                <div class="menu-item conteudo">Conteúdo</div>
+                <div class="menu-item livros">Livros</div>
+                <div class="menu-item chat">Chat</div>
+                <div class="menu-item lives">Lives</div>
+                <div class="menu-item jogos">Jogos</div>
+            </div>
         </div>
     </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Anotações Section -->
-        <div class="section anotacoes">
-            <div class="anotacoes-icon">📋</div>
-            <h2>Anotações</h2>
-            <p>Não deixe suas dúvidas escaparem! Anote tudo aqui e transforme cada pergunta em um passo a mais para o sucesso</p>
-        </div>
-
-        <!-- Grid Section -->
-        <div class="section grid">
-            <div class="item saude" onclick="showMessage('Saúde')">Saúde</div>
-            <div class="item aulas" onclick="showMessage('Aulas')">Aulas</div>
-            <div class="item exercicios" onclick="showMessage('Exercícios')">Exercícios</div>
-            <div class="item conteudo" onclick="showMessage('Conteúdo')">Conteúdo</div>
-            <div class="item livros" onclick="showMessage('Livros')">Livros</div>
-            <div class="item chat" onclick="showMessage('Chat')">Chat</div>
-            <div class="item lives" onclick="showMessage('Lives')">Lives</div>
-            <div class="item jogos" onclick="showMessage('Jogos')">Jogos</div>
-        </div>
-    </div>
-
-    <script>
-        function showMessage(section) {
-    alert(`Você clicou em: ${section}`);
-}
-    </script>
 </body>
 </html>
