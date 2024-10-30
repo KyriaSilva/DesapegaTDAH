@@ -1,134 +1,173 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  body {
     font-family: Arial, sans-serif;
-}
-
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F8D8E6;
-    padding: 15px 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.user-icon {
-    font-size: 2em;
-    margin-right: 10px;
-}
-
-.logo-text {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-}
-
-.highlight {
-    color: #B2335D;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.search-bar input {
-    border: none;
-    outline: none;
-    padding: 5px;
-    font-size: 1em;
-}
-
-.search-bar button {
-    border: none;
-    background: none;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-/* Conteúdo Principal */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFE6EF;
-    padding: 20px;
-}
-
-/* Seção Anotações */
-.anotacoes {
-    background-color: #D3A2E1;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.anotacoes h2 {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-
-.anotacoes-icon {
-    font-size: 3em;
-}
-
-/* Seção de Grade */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    width: 80%;
-}
-
-/* Itens Individuais da Grade */
-.item {
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
     padding: 20px;
-    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Cabeçalho */
+  .header {
+    background-color: #e3b5e6;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .header .logo {
+    font-size: 1.5em;
     font-weight: bold;
-    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header .logo img {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .header .search-box input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+
+  /* Conteúdo principal */
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Coluna Esquerda */
+  .left-column, .right-column {
+    width: 1500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Coluna do Meio */
+  .center-column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Estilos dos blocos */
+  .box {
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
     text-align: center;
-    font-size: 1em;
-    cursor: pointer;
-    position: relative;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Tamanhos específicos */
+  .box-notes {
+    background-color: #b3c7f9;
+    width: 100%;
+    height: 350px;
+  }
+
+  .box-small {
+    width: 80px;
+    height: 80px;
+  }
+
+  .box-horizontal {
+    background-color: #79aaf2;
+    width: 100%;
+    height: 100px;
+  }
+
+  .box-half {
+    background-color: #d8b3f7;
+    width: 48%;
+    height: 130px;
+    text-align: center;
+  }
+
+  /* Estilos dos blocos individuais */
+  .box-health {
+    background-color: #79d3c2;
+  }
+  
+  .box-exercises {
+    background-color: #ffd33b;
+    color: #333;
+  }
+
+  .icon {
+    width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    color: #fff;
 }
 
-.saude { background-color: #8CC6AF; }
-.aulas { background-color: #7BA8E7; }
-.exercicios { background-color: #F5D46C; }
-.conteudo { background-color: #E4899D; }
-.livros { background-color: #CC678B; }
-.chat { background-color: #7FE6D3; }
-.lives { background-color: #D399F3; }
-.jogos { background-color: #F39A8D; }
-
-/* Ponto de Notificação */
-.chat::after, .lives::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 50%;
+.text {
+    margin-top: 2px; /* Espaço entre a imagem e o texto */
+    font-size: 12px; /* Tamanho da fonte do texto */
+    color:#ffff;
 }
+
+  .box-books {
+    background-color: #c3a1e5;
+  }
+
+  .box-chat {
+    background-color: #a3d3e5;
+  }
+
+  .box-classes {
+    background-color: #79aaf2;
+  }
+
+  .box-content {
+    background-color: #d8b3f7;
+  }
+
+  .box-lives {
+    background-color: #d8b3f7;
+  }
+
+  .box-games {
+    background-color: #e58b8b;
+  }
+
+  /* Estilo do texto das descrições */
+  .box p {
+    font-size: 0.8em;
+    margin-top: 5px;
+    font-weight: normal;
+  }
+
+  .icon {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }

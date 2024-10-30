@@ -1,47 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desapega TDAH</title>
-    <link rel="stylesheet" href="inicioaluno.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desapega TDAH</title>
+  <link rel="stylesheet" href="inicioaluno.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="logo">
-                <!-- Espaço para imagem do usuário -->
-                <img src="caminho-da-imagem-do-usuario.png" alt="Ícone do Usuário" class="user-icon">
-                <!-- Espaço para logotipo personalizado -->
-                <img src="logo.png" alt="Logo Desapega TDAH" class="logo-image">
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar">
-                <button>🔍</button>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Anotações Section -->
-            <div class="notes-section">
-                <h2>Anotações</h2>
-                <p>Não deixe suas dúvidas escaparem! Anote tudo aqui e transforme cada pergunta em um passo a mais para o sucesso</p>
-            </div>
-
-            <!-- Grid Menu Section -->
-            <div class="menu">
-                <div class="menu-item saude">Saúde</div>
-                <div class="menu-item aulas">Aulas</div>
-                <div class="menu-item exercicios">Exercícios</div>
-                <div class="menu-item conteudo">Conteúdo</div>
-                <div class="menu-item livros">Livros</div>
-                <div class="menu-item chat">Chat</div>
-                <div class="menu-item lives">Lives</div>
-                <div class="menu-item jogos">Jogos</div>
-            </div>
-        </div>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <div class="header">
+      <div class="logo">
+        <img src="https://via.placeholder.com/40" alt="Logo">
+        <span>Desapega TDAH</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Buscar...">
+      </div>
     </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <!-- Coluna Esquerda -->
+      <div class="left-column">
+        <div class="box box-notes">
+          <div class="icon">📝</div>
+          ANOTAÇÕES
+          <p>Não deixe suas dúvidas escaparem! Anote tudo aqui e transforme cada pergunta em um passo a mais para o sucesso.</p>
+        </div>
+      </div>
+
+      <!-- Coluna do Meio -->
+      <div class="center-column">
+        <div class="box box-small box-health">
+          <div class="icon">💚</div>
+          SAÚDE
+        </div>
+        <div class="box box-small box-exercises">
+            <img src="exercicio.png" alt="exercicio" class="icon">
+            <div class="text">EXERCÍCIOS</div>
+        </div>
+        <div class="box box-small box-books">
+          <div class="icon">📚</div>
+          LIVROS
+        </div>
+        <div class="box box-small box-chat">
+          <div class="icon">💬</div>
+          CHAT
+        </div>
+      </div>
+
+      <!-- Coluna Direita -->
+      <div class="right-column">
+        <div class="box box-horizontal box-classes">
+          <div class="icon">🎓</div>
+          AULAS
+          <p>Assista às aulas gravadas e aprenda no seu ritmo, revisitando o conteúdo sempre que precisar!</p>
+        </div>
+        <div class="box box-horizontal box-content">
+          <div class="icon">📄</div>
+          CONTEÚDO
+          <p>Estude o conteúdo e transforme o aprendizado em conhecimento duradouro!</p>
+        </div>
+        <div style="display: flex; gap: 4%;">
+          <div class="box box-half box-lives">
+            <div class="icon">📺</div>
+            LIVES
+          </div>
+          <div class="box box-half box-games">
+            <div class="icon">🎮</div>
+            JOGOS
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
