@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesapegaTDAH</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <a class="back" href="javascript:history.back()">← Voltar</a>
+<h1>Chat TDA</h1>
+<div class="chat-container">
+    <div class="messages" id="messages"></div>
+    <div class="input-container">
+        <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</div>
+
+<script>
+    const responses = {
+        "Olá": "Olá! Como posso ajudar?",
+        "O que você é?": "Sou apenas um programa e estou aqui para representar outra pessoa!",
+        "Qual é o seu nome?": "Sou um Chat TDA criado para ajudar você.",
+        "O que você pode fazer?": "Posso responder perguntas e ajudar com informações.",
+        "Até logo": "Até logo! Volte sempre!"
+    };
+
+    function sendMessage() {
+        const userInput = document.getElementById('userInput');
+        const message = userInput.value.trim();
+        
+        if (message) {
+            appendMessage("Você: " + message);
+            const response = responses[message] || "Não tenho uma resposta pra isso, desculpa.";
+            appendMessage("Bot: " + response);
+            userInput.value = '';
+        }
+    }
+
+    function appendMessage(msg) {
+        const messagesDiv = document.getElementById('messages');
+        messagesDiv.innerHTML += `<p>${msg}</p>`;
+        messagesDiv.scrollTop = messagesDiv.scrollHeight; // Rola para a parte inferior
+    }
+</script>
+
+</body>
+</html>

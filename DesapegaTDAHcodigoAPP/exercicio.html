@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesapegaTDAH</title>
+    <link rel="stylesheet" href="exercicio.css">
+</head>
+<body>
+    <a class="back" href="javascript:history.back()">← Voltar</a>
+
+<h1>Tabela de Matérias</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Matéria</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Matemática</td>
+            <td><button onclick="showExercises('matematica')">Ver Exercícios</button></td>
+        </tr>
+        <tr>
+            <td>História</td>
+            <td><button onclick="showExercises('historia')">Ver Exercícios</button></td>
+        </tr>
+        <tr>
+            <td>Ciências</td>
+            <td><button onclick="showExercises('ciencias')">Ver Exercícios</button></td>
+        </tr>
+        <tr>
+            <td>Português</td>
+            <td><button onclick="showExercises('portugues')">Ver Exercícios</button></td>
+        </tr>
+        <tr>
+            <td>Geografia</td>
+            <td><button onclick="showExercises('geografia')">Ver Exercícios</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="exercicios" class="exercicios"></div>
+
+<script>
+    const exercicios = {
+        matematica: [
+            "1. Resolva a equação 2x + 3 = 7.",
+            "2. Qual é a área de um triângulo com base 5 e altura 10?"
+        ],
+        historia: [
+            "1. Explique a Revolução Francesa.",
+            "2. Quais foram as causas da Primeira Guerra Mundial?"
+        ],
+        ciencias: [
+            "1. O que é fotossíntese?",
+            "2. Descreva o ciclo da água."
+        ],
+        portugues: [
+            "1. O que é um substantivo?",
+            "2. Escreva um resumo de um livro que você leu."
+        ],
+        geografia: [
+            "1. O que são placas tectônicas?",
+            "2. Descreva a diferença entre clima e tempo."
+        ]
+    };
+
+    function showExercises(materia) {
+        const exerciciosDiv = document.getElementById('exercicios');
+        exerciciosDiv.innerHTML = `<h2>Exercícios de ${capitalizeFirstLetter(materia)}</h2>`;
+        exercicios[materia].forEach(exercicio => {
+            exerciciosDiv.innerHTML += `<p>${exercicio}</p>`;
+        });
+        exerciciosDiv.style.display = 'block';
+    }
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+</script>
+
+</body>
+</html>
