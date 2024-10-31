@@ -125,9 +125,10 @@
 
   .box-half {
     background-color: #d8b3f7;
-    width: 48%;
+    width: 90%;
     height: 130px;
     text-align: center;
+    margin-right: 1.5%;
   }
 
   /* Estilos dos blocos individuais */

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #be5c98;
+        }
+        .question {
+            margin: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #be5c98;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        input[type="number"]:focus {
+            border-color: #9a4a78;
+            outline: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #be5c98;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #9a4a78;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #e94e77;
+        }
+        .back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #be5c98;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<a class="back" href="javascript:history.back()">← Voltar</a>
+<h1>Quiz de Matemática</h1>
+<div id="quiz">
+    <div class="question" id="question"></div>
+    <input type="number" id="answer" placeholder="Sua resposta">
+    <button onclick="checkAnswer()">Verificar</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    const questions = [
+        { question: "5 + 3", answer: 8 },
+        { question: "10 - 6", answer: 4 },
+        { question: "7 * 2", answer: 14 },
+        { question: "12 / 4", answer: 3 },
+        { question: "9 + 1", answer: 10 },
+        { question: "15 - 7", answer: 8 },
+        { question: "6 + 9", answer: 15 },
+        { question: "3 * 4", answer: 12 },
+        { question: "18 / 2", answer: 9 },
+        { question: "20 - 4", answer: 16 },
+        { question: "5 * 5", answer: 25 },
+        { question: "8 + 6", answer: 14 }
+    ];
+
+    let currentQuestion = 0;
+
+    function loadQuestion() {
+        document.getElementById('result').textContent = '';
+        document.getElementById('answer').value = '';
+        document.getElementById('question').textContent = questions[currentQuestion].question;
+    }
+
+    function checkAnswer() {
+        const userAnswer = parseInt(document.getElementById('answer').value);
+        if (userAnswer === questions[currentQuestion].answer) {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById('result').textContent = 'Parabéns! Você completou o quiz!';
+                document.getElementById('question').textContent = '';
+                document.getElementById('answer').style.display = 'none';
+            }
+        } else {
+            document.getElementById('result').textContent = 'Resposta errada. Tente novamente!';
+        }
+    }
+
+    loadQuestion();
+</script>
+
+</body>
+</html>
