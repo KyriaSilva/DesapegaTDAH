@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesapegaTDAH</title>
+<link rel="stylesheet" href="conteudo.css">
+</head>
+<body>
+    <a class="back" href="javascript:history.back()">← Voltar</a>
+<h1>Matérias</h1>
+<div class="button-container">
+    <button class="button" onclick="showTheme('matematica')">Matemática</button>
+    <button class="button" onclick="showTheme('historia')">História</button>
+    <button class="button" onclick="showTheme('ciencias')">Ciências</button>
+    <button class="button" onclick="showTheme('geografia')">Geografia</button>
+    <button class="button" onclick="showTheme('literatura')">Literatura</button>
+</div>
+
+<div id="themeContainer">
+    <table class="theme-table">
+        <thead>
+            <tr>
+                <th>Tema</th>
+                <th>    </th>
+            </tr>
+        </thead>
+        <tbody id="themeBody"></tbody>
+    </table>
+</div>
+
+<div id="explanation" class="explanation"></div>
+
+<script>
+    const themes = {
+        matematica: [
+            { name: "Geometria", explanation: "A geometria estuda as propriedades e as relações das figuras e dos espaços, incluindo ângulos, áreas e volumes." },
+            { name: "Álgebra", explanation: "A álgebra lida com símbolos e as regras para manipulá-los, sendo essencial para resolver equações." }
+        ],
+        historia: [
+            { name: "Idade Média", explanation: "A Idade Média é o período entre a queda do Império Romano e o início da Renascença, marcada por feudos e a influência da Igreja." },
+            { name: "Revolução Industrial", explanation: "A Revolução Industrial foi um período de transição para novos processos de manufatura, começando na Inglaterra no século XVIII." }
+        ],
+        ciencias: [
+            { name: "Ecologia", explanation: "A ecologia estuda as interações entre os seres vivos e seu meio ambiente, incluindo ciclos de vida e habitats." },
+            { name: "Física", explanation: "A física investiga as propriedades da matéria e a energia, abordando leis fundamentais do movimento e da gravidade." }
+        ],
+        geografia: [
+            { name: "Climas", explanation: "Os climas são categorizados em diversas zonas, influenciando a flora, fauna e a vida humana em diferentes regiões." },
+            { name: "Geopolítica", explanation: "A geopolítica estuda a influência da geografia na política internacional e nas relações de poder entre países." }
+        ],
+        literatura: [
+            { name: "Literatura Brasileira", explanation: "A literatura brasileira é rica e diversa, refletindo a cultura e a história do país, desde o período colonial até hoje." },
+            { name: "Romantismo", explanation: "O romantismo foi um movimento literário que priorizou a emoção e a subjetividade, contrastando com o racionalismo anterior." }
+        ]
+    };
+
+    function showTheme(subject) {
+        const themeBody = document.getElementById('themeBody');
+        themeBody.innerHTML = ''; // Limpa temas anteriores
+
+        // Preenche a tabela com os temas correspondentes
+        themes[subject].forEach(theme => {
+            const row = document.createElement('tr');
+            const themeCell = document.createElement('td');
+            themeCell.textContent = theme.name;
+            const actionCell = document.createElement('td');
+            const button = document.createElement('button');
+            button.textContent = 'Ver Explicação';
+            button.className = 'button';
+            button.onclick = function() {
+                showExplanation(theme.explanation);
+            };
+            actionCell.appendChild(button);
+            row.appendChild(themeCell);
+            row.appendChild(actionCell);
+            themeBody.appendChild(row);
+        });
+
+        document.querySelector('.theme-table').style.display = 'table'; // Mostra a tabela de temas
+        document.getElementById('explanation').style.display = 'none'; // Esconde a explicação ao mudar de matéria
+    }
+
+    function showExplanation(explanation) {
+        const explanationDiv = document.getElementById('explanation');
+        explanationDiv.style.display = 'block'; // Mostra a explicação
+        explanationDiv.textContent = explanation; // Define o texto da explicação
+    }
+</script>
+
+</body>
+</html>

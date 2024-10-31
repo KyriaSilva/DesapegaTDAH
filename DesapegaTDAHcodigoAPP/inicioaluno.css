@@ -16,6 +16,16 @@
   p{
     color: rgba(255, 255, 255, 0.5); /* Branco com 50% de transparência */
   }
+  
+  .back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #be5c98;
+    cursor: pointer;
+    text-decoration: none;
+} 
 
 
 .image-button {

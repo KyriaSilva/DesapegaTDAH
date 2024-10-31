@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #f7c8e0; /* Cor de fundo da página */
+    background-color: #efebeb; /* Cor de fundo da página */
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -16,21 +16,18 @@ body {
     padding-top: 60px; /* Espaço para a navbar */
     padding-bottom: 60px; /* Espaço para o rodapé */
 }
-/* não usar por enquanto 
-.navbar {
-    background-color: #ad2066; 
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.5em;
-    width: 100%;
-    position: fixed; 
-    top: 0;
-    left: 0;
-}
-*/
+
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #be5c98;
+    cursor: pointer;
+    text-decoration: none;
+} 
+
 
 .container {
     background-color: #ffffff;
