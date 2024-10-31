@@ -1,0 +1,70 @@
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #be5c98;
+    cursor: pointer;
+    text-decoration: none;
+} 
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eaeaea;
+}
+.container {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 400px;
+}
+.card {
+    background: linear-gradient(135deg, #be5c98, #9a4a78);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.card .number {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #be5c98;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    background-color: #be5c98;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 95%;
+}
+button:hover {
+    background-color: #9a4a78;
+}
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+}

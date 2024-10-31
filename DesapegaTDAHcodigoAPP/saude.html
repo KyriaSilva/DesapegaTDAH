@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesapegaTDAH</title>
+    <link rel="stylesheet" href="saude.css">
+   
+</head>
+<body>
+    <a class="back" href="javascript:history.back()">← Voltar</a>
+<div class="container">
+    <div class="card">
+        <h2>Assinatura Premium</h2>
+        <div class="number">**** **** **** 1234</div>
+    </div>
+
+    <input type="text" id="fullName" placeholder="Nome Completo" required>
+    <input type="number" id="age" placeholder="Idade" required>
+    <button onclick="submitForm()">Confirmar Assinatura</button>
+
+    <div class="footer">Sua assinatura garante acesso a recursos exclusivos!</div>
+</div>
+
+<script>
+    function submitForm() {
+        const fullName = document.getElementById('fullName').value;
+        const age = document.getElementById('age').value;
+
+        if (fullName && age) {
+            alert(`Assinatura confirmada para ${fullName}, Idade: ${age}`);
+            // Limpar os campos
+            document.getElementById('fullName').value = '';
+            document.getElementById('age').value = '';
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    }
+</script>
+
+</body>
+</html>
+
