@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesapegaTDAH</title>
+   <link rel="stylesheet" href="anotacoes.css">
+</head>
+<body>
+    <a class="back" href="javascript:history.back()">← Voltar</a>
+<h1>Anotações Importantes</h1>
+<textarea id="noteInput" placeholder="Escreva suas anotações aqui..."></textarea>
+<button onclick="saveNote()">Salvar Anotação</button>
+
+<div class="notes" id="notes"></div>
+
+<script>
+    function saveNote() {
+        const noteInput = document.getElementById('noteInput');
+        const noteText = noteInput.value.trim();
+
+        if (noteText) {
+            const notesDiv = document.getElementById('notes');
+            const noteElement = document.createElement('div');
+            noteElement.className = 'note';
+            noteElement.textContent = noteText;
+            notesDiv.appendChild(noteElement);
+            noteInput.value = ''; // Limpa o campo de texto
+        } else {
+            alert("Por favor, escreva uma anotação antes de salvar.");
+        }
+    }
+</script>
+
+</body>
+</html>
